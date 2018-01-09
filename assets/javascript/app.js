@@ -87,3 +87,20 @@ function displayImages() {
       }); //close functionC1
     }); //close functionC
   } //close functionB
+
+//functionD:add gif theme
+$("#addBtn").on("click", function(event) {
+  event.preventDefault();
+  //text from submission form
+  var newTheme = $("#inputBird").val().trim();
+  //push text to array
+  themes.push(newTheme);
+  // create buttons
+  renderButtons();
+}); //close functionD
+
+//create inital buttons
+renderButtons();
+
+// click event for button
+$(document).on("click", ".gifBtnClass", displayImages);
