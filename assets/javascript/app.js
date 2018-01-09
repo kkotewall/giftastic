@@ -38,11 +38,12 @@ function displayImages() {
     $.ajax({
       url: queryURL,
       method: "GET"
-    })
-    //functionB1:retrieve gifs
+    })//close ajax query
+
+    //functionC:retrieve gif data
     .done(function(response) {
       var results = response.data;
-      //limit 10 gifs
+      //loop:10gifs
       for (var i = 0; i < results.length; i++) {
         //gif result variable
         var giphy = $("<div class='item float-left'>");
@@ -67,7 +68,22 @@ function displayImages() {
         gifDiv.prepend(p);
         //put image and image div on browser
         $("#gifPopulation").prepend(giphy);
-        
-      }
+      } //close loop:10gifs
 
-     
+      //function C1: animate gif
+      $(".gif").on("click", function() {
+
+        var state = $(this).attr("data-state");
+
+        if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+        } //close if loop
+
+        else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+        } //close else loop
+      }); //close functionC1
+    }); //close functionC
+  } //close functionB
