@@ -3,44 +3,51 @@
 
 <head>
   <meta charset="utf-8">
-  <title>title</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <title>Giftastic</title>
+
+  <!-- Bootstrap 4.0 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  
+  <!-- local css -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
+
 <body>
   <!-- section1 -->
-  <div>
+  <div class="row">
+    
     <!-- 1A:intro & gif buttons -->
-    <div>
+    <div class="col-sm-8">
       <h1>Gifs</h1>
       <h6>Instructions</h6>
 
       <!-- buttons populate from array here -->
-      <div></div>
+      <div id="gifButtons"></div>
     </div><!-- close1A -->
 
     <!-- 1B:submission form: user adds gif topics -->
-    <div>
-      <form>
-            <label>Add gif topic</label><br>
-            <input type="text"><br>
+    <div class="col-sm-4">
+      <form id="formTopic">
+            <label for="addTopic">Add Gif Theme</label><br>
+            <input type="text" id="inputBird"><br>
             <!-- submit button -->
-            <input type="submit" value="Submit Topic">
+            <input id="buttonBird" type="submit" value="Submit">
       </form>
     </div><!-- close1B -->
   </div><!-- close1 -->
-  
 
   <!-- section2: gifs populate here-->
   <div class="row">
-    <div></div>
+    <div class="col-12" id="gifPopulation"></div>
   </div>
-  
 
+
+  <!-- jQuery 3.2.1 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- local JavaScript -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
-
 </html>
