@@ -96,11 +96,11 @@ $("#addBtn").on("click", function(event) {
   //push text to array
   themes.push(newTheme);
   // create buttons
-  renderButtons();
+  createButtons();
 }); //close functionD
 
 //create inital buttons
-renderButtons();
+createButtons();
 
 // click event for button
 $(document).on("click", ".gifBtnClass", displayImages);
