@@ -64,10 +64,10 @@ function displayImages() {
         //gif image class
         gifImage.addClass("gif");
         //prepend gif to div 
-        gifDiv.prepend(gifImage);
-        gifDiv.prepend(p);
+        gifResults.prepend(gifImage);
+        gifResults.prepend(p);
         //put image and image div on browser
-        $("#gifPopulation").prepend(giphy);
+        $("#gifResults").prepend(giphy);
       } //close loop:10gifs
 
       //function C1: animate gif
