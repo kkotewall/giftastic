@@ -22,18 +22,19 @@ function createButtons() {
     gifBtn.text(themes[i]);
     //append button to div
     $("#gifButtons").append(gifBtn);
+    console.log(themes[i]);
   } //close loop
 } //close functionA
 
 //functionB: populate gifs
-function displayImages() {
+function displayGIFS() {
   //clear gifs
   $("#gifs-appear-here").empty();
   $(".item").empty();
     //click event
     var birdGif = $(this).attr("gifBtnAttr");
     //giphy query
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + birdGif + "&api_key=WtL7a88I6lDSvslFMP2JlDT1WvGXcUET&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + birdGif + "&api_key=iAgsakDZcNMgvS2orc4qevsTh9F6MkKk&limit=10";
     //ajax query
     $.ajax({
       url: queryURL,
@@ -103,4 +104,4 @@ $("#addBtn").on("click", function(event) {
 createButtons();
 
 // click event for button
-$(document).on("click", ".gifBtnClass", displayImages);
+$(document).on("click", ".gifBtnClass", displayGIFS());
